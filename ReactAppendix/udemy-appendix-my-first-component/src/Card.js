@@ -1,15 +1,14 @@
 import React from 'react';
 import './Card.css';
 
-const Card = ({data}) => {
+const Card = ({ id, name, email, imgUrl }) => {
     return (
-      <div className='tc card'>
-        <div className='RoboCard'>
-            <img alt='robots' src={data.imgUrl} />
-            <div>
-            <h2>{data.name}</h2>
-            <p>{data.email}</p>
-            </div>
+      <div className='tc bg-light-green dib br3 pa3 ma2 grow bw3 shadow'>
+        <img alt='robots' src={imgUrl} />
+        <div>
+          <h2>{name}</h2>
+          <p>{email}</p>
+          <p>{id}</p>
         </div>
       </div>
     );
