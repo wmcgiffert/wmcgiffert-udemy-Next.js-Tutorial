@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import CardList from './CardList';
+import App from './App';
 import './index.css';
 import 'tachyons';
-import { robots } from './robots';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CardList robots={robots} />
+    <App/>
   </React.StrictMode>
 );  
 // If you want to start measuring performance in your app, pass a function
