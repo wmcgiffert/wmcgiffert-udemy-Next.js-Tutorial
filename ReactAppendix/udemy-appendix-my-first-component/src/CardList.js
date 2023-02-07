@@ -11,7 +11,6 @@ const CardList = ({ robots }) => {
             id={user.id}
             name={user.name}
             email={user.email}
-            imgUrl={user.imgUrl}
           />
         );
       })}

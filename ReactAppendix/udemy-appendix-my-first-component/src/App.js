@@ -9,9 +9,12 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            robots: robots, 
+            robots: [], 
             searchfield: '' 
         }
+    }
+    componentDidMount() {
+        this.setState({ robots: robots });
     }
     onSearchChange = (event) => {
         this.setState({ searchfield: event.target.value });
