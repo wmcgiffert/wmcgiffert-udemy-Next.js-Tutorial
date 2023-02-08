@@ -5,6 +5,7 @@ import Scroll from "../Components//Scroll";
 import './App.css';
 
 
+
 class App extends Component {
     constructor() {
         super();
@@ -35,6 +36,7 @@ class App extends Component {
                 <Scroll>
                     <CardList robots={filteredRobots} />
                 </Scroll>
+
             </div>
         );
     }
