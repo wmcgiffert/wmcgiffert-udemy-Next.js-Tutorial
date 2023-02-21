@@ -1,14 +1,19 @@
+import styles from './banner.module.css'
 
-import styles from '@/styles/Home.module.css';
-
-export default function Banner(){
+const Banner = (props) => {
     return (
-        <div className={styles.card}>
-            <h1>Coffee Connoisseur</h1>
-            <p>Find the best coffee shops in your area</p>
-            <button>Find a Shop</button>
+        <div className={styles.container}>
+            <h1 className={styles.title}>
+                <span className={styles.title1}>Coffee </span> 
+                <span className={styles.title2}>Connoisseur</span>
+            </h1>
+            <p className={styles.subTitles}>Discover your local coffee shops!</p>
+            <button 
+                className={styles.button}
+                onClick={props.handleOnClick}
+            >{props.buttonText}</button>
         </div>
     )
 };
-
+export default Banner;
 
