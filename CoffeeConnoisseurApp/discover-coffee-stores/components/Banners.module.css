@@ -28,7 +28,7 @@
   font-size: 1.5rem /* 24px */;
   line-height: 2rem /* 32px */;
 
-  color: var(--text-white-100);
+  color: var(--text-purple);
 }
 
 .buttonWrapper {
@@ -36,7 +36,7 @@
 }
 
 .button {
-  background-color: var(--text-purple-dark);
+  background-color: var(--text-purple);
   cursor: pointer;
   color: white;
   outline: 0;
@@ -94,6 +94,7 @@
   }
 
   .button {
+    /* margin-top: 1.25rem;    */
     padding-top: 1rem /* 16px */;
     padding-bottom: 1rem /* 16px */;
     font-size: 1.125rem /* 18px */;
