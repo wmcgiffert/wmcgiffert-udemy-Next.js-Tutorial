@@ -2,8 +2,8 @@ import { useRouter } from 'next/router';
 
 const CoffeeStore = () => {
   const router = useRouter();
-  console.log("router", router);
-  const { id } = router.query;
+
+  const id = router.query.id;
   return <div>Coffee Store {id} this is pretty simple</div>;
 };
 
