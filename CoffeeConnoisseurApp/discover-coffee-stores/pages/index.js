@@ -1,7 +1,7 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 import Banner from '@/components/banner';
-
 
 export default function Home() {
   const handleOnBannerBtnClick = () => {
@@ -22,6 +22,7 @@ export default function Home() {
           buttonText="View stores nearby" 
           handleOnClick={handleOnBannerBtnClick}
         />
+        <Link href="/coffee-store/123">Coffee Store</Link>
       </main>
 
       <footer className={styles.footer}>
