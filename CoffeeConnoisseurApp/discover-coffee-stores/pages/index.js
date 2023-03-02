@@ -26,7 +26,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>&#169;2019 The SocialBooking</p>
+        <p>&#169;2019 The Coffee Connoisseur</p>
       </footer>
     </>
   );

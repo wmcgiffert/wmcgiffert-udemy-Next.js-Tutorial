@@ -8,7 +8,9 @@ const CoffeeStore = () => {
 
   return( 
     <div className={styles.main}>
-      <Link href={'/'}>Back to Home</Link>
+      <Link href={'/'}>
+          Back to Home
+      </Link>
       <h1>
         Coffee Store Query Param:  
         <div className={styles.main}>
