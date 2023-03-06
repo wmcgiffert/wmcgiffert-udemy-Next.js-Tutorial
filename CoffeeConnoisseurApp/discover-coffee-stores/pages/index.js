@@ -22,7 +22,9 @@ export default function Home() {
           buttonText="View stores nearby" 
           handleOnClick={handleOnBannerBtnClick}
         />
-        <Link href="/coffee-store/123">Coffee Store</Link>
+        <div>
+          <Link href="/coffee-store/123">Coffee Store</Link>
+        </div>
       </main>
 
       <footer className={styles.footer}>
