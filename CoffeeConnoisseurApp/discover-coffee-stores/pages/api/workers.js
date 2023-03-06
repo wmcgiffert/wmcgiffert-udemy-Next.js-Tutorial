@@ -2,16 +2,15 @@
 
 export default function handler(req, res) {
   const currentDate = new Date(Date.now());
-  res.status(200).json(
-    {
-      messsage: 'Last updated: ' + currentDate,
-      workers:[
-        { name: 'Jay Glynn' },
-        { name: 'Surendra Jha' },
-        { name: 'Madhu Ramnath' },
-        { name: 'Garrett McGiffert' },
-        { name: 'Tyler Epps' },
-      ]
-    }
-  )
+  const workers = {
+    messsage: 'Last updated: ' + currentDate,
+    workers:[
+      { name: 'Jay' },
+      { name: 'Surendra' },
+      { name: 'Madhu' },
+      { name: 'Garrett McGiffert' },
+    ]
+  }
+  console.log(workers)
+  res.status(200).json(workers);
 }
