@@ -12,7 +12,8 @@ export default function Banner(props) {
                 <button 
                     className={styles.button}
                     onClick={props.handleOnClick}
-                >{props.buttonText}</button>
+                    >{props.buttonText}
+                </button>
             </div>
         </div>
     );
