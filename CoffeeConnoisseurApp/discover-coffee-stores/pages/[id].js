@@ -18,6 +18,6 @@ const CourseHome = () => {
         </div>
     </>
   );
-}
+} 
 
 export default CourseHome;
