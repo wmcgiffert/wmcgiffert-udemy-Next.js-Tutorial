@@ -18,7 +18,9 @@
 .heroImage {
   position: absolute;
   top: 0px;
-  z-index: 0;
+  z-index: 1;
+  right: 1%;
+  top: 5%;
 }
 
 /** Breakpoints:
@@ -53,7 +55,8 @@
   }
 
   .heroImage{
-    right: 20%;
+    right: 1%;
+    top: 5%;
   }
 }
 
@@ -69,10 +72,27 @@
   }
 
   .heroImage{
-    right: 20%;
+    right: 10%;
+    top: 5%;
   }
 }
 
+@media (min-width: 3440px) {
+  .container {
+    padding-left: 2.5rem /* 40px */;
+    padding-right: 2.5rem /* 40px */;
+  }
+  .main {
+    margin-top: 5rem /* 80px */;
+    padding-left: 2rem /* 32px */;
+    padding-right: 2rem /* 32px */;
+  }
+
+  .heroImage{
+    right: 20%;
+    top: 5%;
+  }
+}
 
 /* Default home.module.css */
 /* .main {

@@ -108,6 +108,9 @@
 @media (min-width: 1024px) {
   .container {
     text-align: left;
+    margin-bottom: 6rem;
+    position: relative;
+    z-index: 2;
   }
 
   .title {
