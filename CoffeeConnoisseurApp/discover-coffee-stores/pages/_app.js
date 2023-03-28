@@ -1,14 +1,14 @@
 import '@/styles/globals.css'
-import { Roboto } from '@next/font/google'
+import { IBM_Plex_Sans } from '@next/font/google'
 
-const roboto = Roboto({
+const IBM = IBM_Plex_Sans({
   weight: '400',
   subsets: ['latin'],
 })
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <main className={roboto.className}>
+    <main className={IBM.className}>
       <Component {...pageProps} />
     </main>
   )

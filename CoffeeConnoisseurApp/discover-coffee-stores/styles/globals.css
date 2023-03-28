@@ -43,6 +43,7 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+  background: url("/static/background.png");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -93,9 +94,10 @@ body {
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Roboto', IBMPlexSans, -apple-system, BlinkMacSystemFont, Segoe UI, 
+  font-family: IBMPlexSans, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', 
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background: url("/static/background.png");
+    /* Moved to root so that it always fills the webpage */
+    /* background: url("/static/background.png"); */
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
