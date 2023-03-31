@@ -4,7 +4,7 @@ import Image  from 'next/image'
 const Card = (props) => {
     return(
         <div className={styles}>
-            <p>Card Component</p>
+            <h1>Card Component</h1>
         </div>
     );
 };
