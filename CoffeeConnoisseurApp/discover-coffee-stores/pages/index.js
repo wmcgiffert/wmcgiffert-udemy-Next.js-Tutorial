@@ -24,6 +24,7 @@ export default function Home() {
           buttonText="View stores nearby" 
           handleOnClick={handleOnBannerBtnClick}
         />
+       
         <div className={styles.heroImage}>
           <Image 
             src="/static/bannerImage.png"
@@ -32,9 +33,9 @@ export default function Home() {
             alt="Coffee Image"
           />
         </div>
-    
+        
         <Card/>
-    
+        
         <div>
           <Link href="/coffee-store/123">Coffee Store</Link>
         </div>
