@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 import Banner from '@/components/banner';
 import Image from 'next/image';
+import Card from '@/components/card';
 
 export default function Home() {
   const handleOnBannerBtnClick = () => {
@@ -31,7 +32,9 @@ export default function Home() {
             alt="Coffee Image"
           />
         </div>
-        
+    
+        <Card/>
+    
         <div>
           <Link href="/coffee-store/123">Coffee Store</Link>
         </div>
