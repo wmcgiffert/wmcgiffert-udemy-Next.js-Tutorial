@@ -7,10 +7,10 @@ const Card = (props) => {
         <div className={styles}>
             <h1>Card Title</h1>
             <Image
-            src="/static/CoffeeShop1.jpeg"
-            width={300}
-            height={200}
-            alt="Barista at Coffee Shop"
+                src="/static/CoffeeShop1.jpeg"
+                width={300}
+                height={200}
+                alt="Barista at Coffee Shop"
             />
             <p>Card Details</p>
             <Link href="/coffee-store/123">Coffee Store</Link>
