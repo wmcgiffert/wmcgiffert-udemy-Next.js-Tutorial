@@ -4,6 +4,12 @@ import Banner from '@/components/banner';
 import Image from 'next/image';
 import Card from '@/components/card';
 
+const cardInfo = {
+  href: "/coffee-store/123",
+  imgUrl: "/static/CoffeeShop1.jpeg",
+  name: "Coffee Store 1"
+}
+
 
 export default function Home() {
   const handleOnBannerBtnClick = () => {
@@ -34,7 +40,9 @@ export default function Home() {
           />
         </div>
         
-        <Card/>
+        <Card
+          props = {cardInfo}
+        />
         
       </main>
 
