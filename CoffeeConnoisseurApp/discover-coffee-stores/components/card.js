@@ -3,17 +3,18 @@ import Image  from 'next/image'
 import Link from 'next/link';
 
 const Card = (props) => {
+    const { href, name, imageUrl, details } = props.cardData;
     return(
         <div className={styles}>
-            <Link href={props.href}>
-                <h2>{props.name}</h2>
+            <Link href={href}>
+                <h2>{name}</h2>
                 <Image
-                    src={props.imageUrl}
+                    src={imageUrl}
                     width={300}
                     height={200}
                     alt="Barista at Coffee Shop"
                 />
-                <p>{props.details}</p>
+                <p>{details}</p>
             </Link>
         </div>
     );

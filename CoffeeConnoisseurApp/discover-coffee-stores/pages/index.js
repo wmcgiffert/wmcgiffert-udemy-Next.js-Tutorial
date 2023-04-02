@@ -42,10 +42,7 @@ export default function Home() {
         </div>
         
         <Card
-          name={cardInfo.name}
-          imageUrl={cardInfo.imgUrl}
-          href={cardInfo.href}
-          details={cardInfo.details}
+          cardData={cardData}
         />
         
       </main>
