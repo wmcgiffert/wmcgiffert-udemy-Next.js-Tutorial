@@ -5,15 +5,16 @@ import Link from 'next/link';
 const Card = (props) => {
     return(
         <div className={styles}>
-            <h2>{props.name}</h2>
-            <Image
-                src="/static/CoffeeShop1.jpeg"
-                width={300}
-                height={200}
-                alt="Barista at Coffee Shop"
-            />
-            <p>Card Details</p>
-            <Link href="/coffee-store/123">Coffee Store</Link>
+            <Link href={props.href}>
+                <h2>{props.name}</h2>
+                <Image
+                    src={props.imageUrl}
+                    width={300}
+                    height={200}
+                    alt="Barista at Coffee Shop"
+                />
+                <p>{props.details}</p>
+            </Link>
         </div>
     );
 };

@@ -5,9 +5,10 @@ import Image from 'next/image';
 import Card from '@/components/card';
 
 const cardInfo = {
-  href: "/coffee-store/123",
+  href: "/coffee-store/Dark-Horse-Coffee",
   imgUrl: "/static/CoffeeShop1.jpeg",
-  name: "Coffee Store 1"
+  name: "Dark Horse Coffee",
+  details:"Great Coffee Shop hidden away in the Gulch of Nashville!"
 }
 
 
@@ -41,7 +42,10 @@ export default function Home() {
         </div>
         
         <Card
-          props = {cardInfo}
+          name={cardInfo.name}
+          imageUrl={cardInfo.imgUrl}
+          href={cardInfo.href}
+          details={cardInfo.details}
         />
         
       </main>
