@@ -2,8 +2,8 @@ import styles from './card.module.css'
 import Image  from 'next/image'
 import Link from 'next/link';
 
-const Card = (props) => {
-    const { href, name, imageUrl, details } = props.cardData;
+const Card = ({ href, name, imageUrl, details }) => {
+    console.log(imageUrl); 
     return(
         <div className={styles}>
             <Link href={href}>

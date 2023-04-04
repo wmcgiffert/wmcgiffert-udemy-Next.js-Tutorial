@@ -2,15 +2,24 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 import Banner from '@/components/banner';
 import Image from 'next/image';
-import Card from '@/components/card';
+import CardList from '@/components/cardList';
 
-const cardInfo = {
-  href: "/coffee-store/Dark-Horse-Coffee",
-  imgUrl: "/static/CoffeeShop1.jpeg",
-  name: "Dark Horse Coffee",
-  details:"Great Coffee Shop hidden away in the Gulch of Nashville!"
-}
-
+const cardInfo = [
+  {
+    id: 1,
+    href: "/coffee-store/Dark-Horse-Coffee",
+    imageUrl: "/static/CoffeeShop1.jpeg",
+    name: "Dark Horse Coffee",
+    details:"Great Coffee Shop hidden away in the Gulch of Nashville!"
+  },
+  {
+    id: 2,
+    href: "/coffee-store/C-Jacks-Coffee",
+    imageUrl: '/static/CoffeeShop1.jpeg',
+    name: "C Jacks Coffee",
+    details:"Great Coffee Shop hidden away in Midtown of Nashville!"
+  }
+];
 
 export default function Home() {
   const handleOnBannerBtnClick = () => {
@@ -41,10 +50,10 @@ export default function Home() {
           />
         </div>
         
-        <Card
-          cardData={cardData}
+        <CardList
+          cardData={cardInfo}
         />
-        
+
       </main>
 
       <footer className={styles.footer}>

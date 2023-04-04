@@ -1,4 +1,4 @@
-import styles from './banners.module.css'
+import styles from './banner.module.css'
 
 export default function Banner(props) {
     return (
