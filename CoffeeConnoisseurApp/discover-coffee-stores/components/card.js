@@ -8,8 +8,8 @@ const Card = ({ href, name, imageUrl, details }) => {
             <div className={styles.card}>
                 <Image
                     src={imageUrl}
-                    width={300}
-                    height={200}
+                    width={275}
+                    height={175}
                     alt="Barista at Coffee Shop"
                 />
                 <h2>{name}</h2>

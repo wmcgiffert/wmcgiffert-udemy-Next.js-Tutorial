@@ -17,10 +17,9 @@
 
 .heroImage {
   position: absolute;
-  top: 0px;
   z-index: 0;
   right: 1%;
-  top: 5%;
+  top: 3%;
 }
 
 /** Breakpoints:
@@ -56,7 +55,7 @@
 
   .heroImage{
     right: 1%;
-    top: 5%;
+    top: 3%;
   }
 }
 
@@ -73,7 +72,7 @@
 
   .heroImage{
     right: 10%;
-    top: 5%;
+    top: 3%;
   }
 }
 
@@ -90,7 +89,7 @@
 
   .heroImage{
     right: 20%;
-    top: 5%;
+    top: 3%;
   }
 }
 
