@@ -157,6 +157,8 @@ footer{
   height: 50px;
   text-align: center;
   z-index: 1;
+  margin: 20px;
+  padding: 5px;
 }
 
 @media (prefers-color-scheme: dark) {

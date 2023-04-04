@@ -18,6 +18,21 @@ const cardInfo = [
     imageUrl: '/static/CoffeeShop1.jpeg',
     name: "C Jacks Coffee",
     details:"Great Coffee Shop hidden away in Midtown of Nashville!"
+
+  },
+  {
+    id: 3,
+    href: "/coffee-store/Dark-Horse-Coffee",
+    imageUrl: "/static/CoffeeShop1.jpeg",
+    name: "D Frazier Coffee",
+    details:"Great Coffee Shop hidden away in Germantown Nashville!"
+  },
+  {
+    id: 4,
+    href: "/coffee-store/C-Jacks-Coffee",
+    imageUrl: '/static/CoffeeShop1.jpeg',
+    name: "J Long Coffee",
+    details:"Great Coffee Shop hidden away in East Nashville!"
   }
 ];
 
