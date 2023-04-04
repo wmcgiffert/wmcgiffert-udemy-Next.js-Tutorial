@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import styles from '@/styles/Home.module.css';
+import styles from '@/styles/home.module.css';
 import Banner from '@/components/banner';
 import Image from 'next/image';
 import CardList from '@/components/cardList';
@@ -22,14 +22,14 @@ const cardInfo = [
   },
   {
     id: 3,
-    href: "/coffee-store/Dark-Horse-Coffee",
+    href: "/coffee-store/D Frazier Coffee",
     imageUrl: "/static/CoffeeShop1.jpeg",
     name: "D Frazier Coffee",
     details:"Great Coffee Shop hidden away in Germantown Nashville!"
   },
   {
     id: 4,
-    href: "/coffee-store/C-Jacks-Coffee",
+    href: "/coffee-store/J-Long-Coffee",
     imageUrl: '/static/CoffeeShop1.jpeg',
     name: "J Long Coffee",
     details:"Great Coffee Shop hidden away in East Nashville!"
