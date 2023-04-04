@@ -44,8 +44,8 @@ export default function Home() {
         <div className={styles.heroImage}>
           <Image 
             src="/static/bannerImage.png"
-            width={500}
-            height={500}
+            width={350}
+            height={350}
             alt="Coffee Image"
           />
         </div>

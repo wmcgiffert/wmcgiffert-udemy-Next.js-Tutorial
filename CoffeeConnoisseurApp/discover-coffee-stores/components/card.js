@@ -3,7 +3,6 @@ import Image  from 'next/image'
 import Link from 'next/link';
 
 const Card = ({ href, name, imageUrl, details }) => {
-    console.log(imageUrl); 
     return(
         <div className={styles}>
             <Link href={href}>

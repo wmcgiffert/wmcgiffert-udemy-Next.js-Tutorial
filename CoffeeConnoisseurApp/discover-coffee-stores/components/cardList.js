@@ -3,7 +3,6 @@ import Card from './card'
 
 
 const CardList = ({ cardData }) =>{
-    console.log(cardData)
 return(
     <div className={styles}>
         {cardData.map((coffeeStore) => {
