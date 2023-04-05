@@ -33,6 +33,13 @@ const cardInfo = [
     imageUrl: '/static/CoffeeShop1.jpeg',
     name: "J Long Coffee",
     details:"Great Coffee Shop hidden away in East Nashville!"
+  },
+  {
+    id: 5,
+    href: "/coffee-store/C Smith Coffee",
+    imageUrl: '/static/CoffeeShop1.jpeg',
+    name: "C Smith Coffee",
+    details:"Great Coffee Shop hidden away in Bellemeade Nashville!"
   }
 ];
 
