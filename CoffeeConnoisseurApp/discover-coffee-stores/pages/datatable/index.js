@@ -3,55 +3,84 @@ import DataTable from 'react-data-table-component';
 import styles from '@/styles/datatable.module.css'
 import Image from 'next/image';
 import logo from '../../public/static/ABlogo.png'
+import SearchBox from '@/components/datatableComponents/SearchBox'
 
 const DataTablePage = () => {
-    const [data, setData] = useState([]);
-
     const tableData = [
-        { id: 1, name: 'John', age: 28, city: 'New York'},
-        { id: 2, name: 'Jane', age: 32, city: 'San Francisco' },
-        { id: 3, name: 'Michael', age: 24, city: 'Los Angeles' },
-        { id: 4, name: 'Emma', age: 31, city: 'Chicago' },
-        { id: 5, name: 'Jake', age: 32, city: 'Nashville' },
-        { id: 6, name: 'Chris', age: 33, city: 'Boston' },
-        { id: 7, name: 'Doug', age: 34, city: 'Atlanta' },
-        { id: 8, name: 'Carli', age: 35, city: 'Birmingham' },
-        { id: 9, name: 'Garrett', age: 36, city: 'Charlotte' },
-        { id: 10, name: 'Daragh', age: 30, city: 'Denver' },
-        { id: 11, name: 'Shelby', age: 30, city: 'Charleston' },
-        { id: 12, name: 'Giles', age: 30, city: 'New Mexico City' },
-        { id: 13, name: 'Caitlyn', age: 30, city: 'Dallas' },
-        { id: 14, name: 'Taylor', age: 30, city: 'Miami' },
+        { id: 1, model: 'FundInfo', property: 28, value: 'New York'},
+        { id: 2, model: 'FundInfo', property: 32, value: 'San Francisco' },
+        { id: 3, model: 'FundInfo', property: 24, value: 'Los Angeles' },
+        { id: 4, model: 'FundFilter', property: 31, value: 'Chicago' },
+        { id: 5, model: 'FundFilter', property: 32, value: 'Nashville' },
+        { id: 6, model: 'FundFilter', property: 33, value: 'Boston' },
+        { id: 7, model: 'FundFilter', property: 34, value: 'Atlanta' },
+        { id: 8, model: 'FundInfo', property: 35, value: 'Birmingham' },
+        { id: 9, model: 'FundInfo', property: 36, value: 'Charlotte' },
+        { id: 10, model: 'KeyFacts', property: 30, value: 'Denver' },
+        { id: 11, model: 'KeyFacts', property: 30, value: 'Charleston' },
+        { id: 12, model: 'KeyFacts', property: 30, value: 'New Mexico City' },
+        { id: 13, model: 'KeyFacts', property: 30, value: 'Dallas' },
+        { id: 14, model: 'KeyFacts', property: 30, value: 'Miami' },
     ];
     const columns = [
-        { name: 'ID', selector: row => row.id, sortable: true },
-        { name: 'Name', selector: row => row.name, sortable: true },
-        { name: 'Age', selector: row => row.age, sortable: true },
-        { name: 'City', selector: row => row.city, sortable: true },
-        { name: 'Edit', selector: row => row.edit, sortable: false}
+        // { name: 'ID', selector: row => row.id, sortable: true },
+        { name: 'Model', selector: row => row.model, sortable: true },
+        { name: 'Property', selector: row => row.property, sortable: true },
+        { name: 'Value', selector: row => row.value, sortable: true },
+        { name: 'EN-GB', selector: row => row.value, sortable: true },
+        { name: 'UK-HG', selector: row => row.value, sortable: true },
+        { name: 'SP', selector: row => row.value, sortable: true },
+        // { name: 'Edit', selector: row => row.edit, sortable: false}
     ];
+    const listWithKey = tableData.map(record => (
+        {
+            id:`${record.id}`,
+            transKey:`${record.model}-${record.property}-${record.model}`,
+            model:`${record.model}`,
+            property:`${record.property}`,
+            value:`${record.value}`,
+        }
+    ));
+    console.log(listWithKey)
 
-    useEffect(()=>setData(tableData),[]);
-    
+    const [data, setData] = useState([]);
+    const [searchfield, setSearchfield] = useState('');
+
+    useEffect(()=>setData(listWithKey),[]);
+
+    const onSearchChange = (event) => {
+        setSearchfield(event.target.value);
+    };
+    const filteredTranslations = data.filter( translation => {
+        return translation.transKey.toLowerCase().includes(searchfield.toLowerCase());
+    });
+
+
+ 
 
   return (
     <div className={styles.container}>
-        <nav className={styles.Nav}>
+        <nav className={styles.navbar}>
             <Image
                 height={100}
-                width={100}
+                width={200}
                 src={logo}
+                className={styles.img}
+                alt='AB Logo'
             />
-            <div>
-                AB Navbar
+            <div className={styles.title}>
+                AllianceBernstien
             </div>
         </nav>
         <div className={styles.tableContainer}>
-            <h1>AB Translations</h1>
+            <div className={styles.tableHeader}>
+                <h1 className={styles.tableTitle}>AB Translations</h1>
+                <SearchBox searchChange = {onSearchChange} />
+            </div>
             <DataTable
-                title="Users"
+                title="Translation Records"
                 columns={columns}
-                data={data}
+                data={filteredTranslations}
                 pagination
                 selectableRows
                 

@@ -1,0 +1,16 @@
+.container{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    margin: 50px;
+}
+.textBox{
+    margin: 5px;
+    background-color: white;
+    color: black;
+    height: 30px;
+    width: 200px;
+}
