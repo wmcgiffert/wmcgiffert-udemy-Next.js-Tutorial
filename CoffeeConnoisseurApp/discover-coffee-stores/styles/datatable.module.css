@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     background-color: white;
+    margin: 20px;
 }
 
 .tableHeader{
@@ -59,4 +60,11 @@
 
 .input{
     background-color: white;
+}
+
+.button{
+    font-size: 15px;
+    color: black;
+    width: 50px;
+    border-radius: 5px;
 }
