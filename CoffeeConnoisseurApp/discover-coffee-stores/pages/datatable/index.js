@@ -35,13 +35,12 @@ const DataTablePage = () => {
     const listWithKey = tableData.map(record => (
         {
             id:`${record.id}`,
-            transKey:`${record.model}-${record.property}-${record.model}`,
+            transKey:`${record.model}-${record.property}-${record.value}`,
             model:`${record.model}`,
             property:`${record.property}`,
             value:`${record.value}`,
         }
     ));
-    console.log(listWithKey)
 
     const [data, setData] = useState([]);
     const [searchfield, setSearchfield] = useState('');
@@ -54,9 +53,6 @@ const DataTablePage = () => {
     const filteredTranslations = data.filter( translation => {
         return translation.transKey.toLowerCase().includes(searchfield.toLowerCase());
     });
-
-
- 
 
   return (
     <div className={styles.container}>
@@ -74,7 +70,7 @@ const DataTablePage = () => {
         </nav>
         <div className={styles.tableContainer}>
             <div className={styles.tableHeader}>
-                <h1 className={styles.tableTitle}>AB Translations</h1>
+                <h1 className={styles.tableTitle}>Field Translations</h1>
                 <SearchBox searchChange = {onSearchChange} />
             </div>
             <DataTable
