@@ -5,26 +5,31 @@ import Image from 'next/image';
 import logo from '../../public/static/ABlogo.png'
 import SearchBox from '@/components/datatableComponents/SearchBox'
 import tableData from '@/components/datatableComponents/tableData';
+import EInput from '@/components/EInput';
 
 
 
 const DataTablePage = () => {
     console.table(tableData);
-    
+
     const columns = [
-        {
-            cell: () => <button onClick={handleButtonClick} className={styles.button}> Edit </button>,
-            ignoreRowClick: true, 
-            allowOverflow: true, 
-            button: true,
-        },
         { name: 'Model', selector: row => row.model, sortable: true },
         { name: 'Property', selector: row => row.property, sortable: true },
-        { name: 'Default', selector: row => row.default, sortable: true },
-        { name: 'EN-GB', selector: row => row.default, sortable: true },
-        { name: 'UK-HG', selector: row => row.default, sortable: true },
-        { name: 'SP', selector: row => row.default, sortable: true },
-        // { name: 'ID', selector: row => row.id, sortable: true },
+        { name: 'Default', 
+            cell: (row) => <EInput initial={row.default} />,
+        },
+        { name: 'EN-GB', 
+            cell: (row) => <EInput initial={row.default} />,
+        },
+        { name: 'UK-HG', 
+            cell: (row) => <EInput initial={row.default} />,
+        },
+        { name: 'SP', 
+            cell: (row) => <EInput initial={row.default} />,
+        },
+        { name: 'TW',
+            cell: (row) => <EInput initial={row.default} />,
+        },
     ];
     const listWithKey = tableData.map(record => (
         {
@@ -79,7 +84,7 @@ const DataTablePage = () => {
                 columns={columns}
                 data={filteredTranslations}
                 pagination
-                selectableRows
+                
             />
         </div>
     </div>
