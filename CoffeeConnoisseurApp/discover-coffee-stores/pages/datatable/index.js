@@ -18,17 +18,8 @@ const DataTablePage = () => {
         { name: 'Default', 
             cell: (row) => <EInput initial={row.default} />,
         },
-        { name: 'EN-GB', 
-            cell: (row) => <EInput initial={row.default} />,
-        },
-        { name: 'UK-HG', 
-            cell: (row) => <EInput initial={row.default} />,
-        },
-        { name: 'SP', 
-            cell: (row) => <EInput initial={row.default} />,
-        },
         { name: 'TW',
-            cell: (row) => <EInput initial={row.default} />,
+            cell: (row) => <EInput initial={row.tw} />,
         },
     ];
     const listWithKey = tableData.map(record => (
@@ -38,6 +29,7 @@ const DataTablePage = () => {
             model:`${record.model}`,
             property:`${record.property}`,
             default:`${record.default}`,
+            tw:`${record.tw}`,
         }
     ));
 
