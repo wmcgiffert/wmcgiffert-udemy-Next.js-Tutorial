@@ -10,18 +10,9 @@ import EInput from '@/components/EInput';
 
 
 const DataTablePage = () => {
+    //pull tableDate from GET call not from the JSON
     console.table(tableData);
-    const [rowDataToEdit, setRowDataToEdit] = useState(null)
-    const columns = [
-        { name: 'Model', selector: row => row.model, sortable: true },
-        { name: 'Property', selector: row => row.property, sortable: true },
-        { name: 'Default', 
-            cell: (row, index, column) => <EInput onChange={(value) => handleRowEdit(value, index, column.name)} initial={row.default} />,
-        },
-        { name: 'TW',
-            cell: (row, index, column) => <EInput onChange={(value) => handleRowEdit(value, index, column.name)} initial={row.tw} />,
-        },
-    ];
+
     const listWithKey = tableData.map(record => (
         {
             id:`${record.id}`,
@@ -33,8 +24,23 @@ const DataTablePage = () => {
         }
     ));
 
+    console.table(listWithKey);
+    
     const [data, setData] = useState([]);
     const [searchfield, setSearchfield] = useState('');
+    const [rowDataToEdit, setRowDataToEdit] = useState(null)
+
+    const columns = [
+        { name: 'Model', selector: row => row.model, sortable: true },
+        { name: 'Property', selector: row => row.property, sortable: true },
+        { name: 'Default', 
+            cell: (row, index, column) => <EInput onChange={(value) => handleRowEdit(value, index, column.name)} initial={row.default} />,
+        },
+        { name: 'TW',
+            cell: (row, index, column) => <EInput onChange={(value) => handleRowEdit(value, index, column.name)} initial={row.tw} />,
+        },
+    ];
+    
 
     useEffect(() => {
         if (rowDataToEdit) {
@@ -63,21 +69,7 @@ const DataTablePage = () => {
         setRowDataToEdit(updatedRow)
     }
 
-    const updateTranslation = async () => {
-        // TODO: PUT updated translation data
-        const API_URL = "https://api-url-here"
-        try {
-            const response = await fetch(API_URL, {
-                method: "PUT",
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(rowDataToEdit)
-            })
-            const updatedData = await response.json()
-            console.log(updatedData)
-        } catch (err) {
-            console.error(err)
-        }
-    }
+    
 
     const onSearchChange = (event) => {
         setSearchfield(event.target.value);
@@ -87,10 +79,23 @@ const DataTablePage = () => {
         return translation.transKey.toLowerCase().includes(searchfield.toLowerCase());
     });
 
-
+    //Reserved for Save button
     const handleButtonClick = () => {
-		
-		console.log('edit');
+		const updateTranslation = async () => {
+            // TODO: PUT updated translation data
+            const API_URL = "https://api-url-here"
+            try {
+                const response = await fetch(API_URL, {
+                    method: "PUT",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(rowDataToEdit)
+                })
+                const updatedData = await response.json()
+                console.log(updatedData)
+            } catch (err) {
+                console.error(err)
+            }
+        }
 	};
     
   return (
