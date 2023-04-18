@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-const EInput = ({ initial }) =>{
-    const [value, setVaule] = useState(initial);
+const EInput = ({ initial, onChange }) =>{
+    const [value, setValue] = useState(initial);
     const [isEditable, setIsEditable] = useState(false);
 
     const toggleEdit = () => {
@@ -8,7 +8,8 @@ const EInput = ({ initial }) =>{
     };
 
     const handleChange = (e) =>{
-        setVaule(e.target.value);
+        setValue(e.target.value);
+        onChange(e.target.value)
     };
 
     const handleBlur = () =>{
