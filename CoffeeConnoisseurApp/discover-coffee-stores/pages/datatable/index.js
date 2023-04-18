@@ -1,5 +1,5 @@
 import React, { useEffect, useState} from 'react';
-import DataTable from 'react-data-table-component';
+import DataTable from 'react-data-table-component'; // https://react-data-table-component.netlify.app/?path=/docs/api-columns--page Component Docs
 import styles from '@/styles/datatable.module.css'
 import Image from 'next/image';
 import logo from '../../public/static/ABlogo.png'
@@ -92,7 +92,7 @@ const DataTablePage = () => {
 		
 		console.log('edit');
 	};
-
+    
   return (
     <div className={styles.container}>
         <nav className={styles.navbar}>
@@ -117,8 +117,7 @@ const DataTablePage = () => {
                 title="Translation Records"
                 columns={columns}
                 data={filteredTranslations}
-                pagination
-                
+                // pagination
             />
         </div>
     </div>
