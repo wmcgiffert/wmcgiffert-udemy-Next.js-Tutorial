@@ -91,7 +91,7 @@ const DataTablePage = () => {
                     body: JSON.stringify(rowDataToEdit)
                 })
                 const updatedData = await response.json()
-                console.log(updatedData)
+                // console.log(updatedData)
             } catch (err) {
                 console.error(err)
             }
