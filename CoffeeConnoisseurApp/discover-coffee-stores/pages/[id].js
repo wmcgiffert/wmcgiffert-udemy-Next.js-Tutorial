@@ -1,6 +1,10 @@
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
+//See if you can make an API call outside the default fuction
+//fetch....GET Data
+
+
 const CourseHome = () => {
    const router = useRouter();
    const id = router.query.id;
